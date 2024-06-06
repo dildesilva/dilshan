@@ -1,44 +1,190 @@
-/* abt.css */
-
-/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Main content styles */
-.divabout {
-    background-color: rgb(0, 0, 0);
-    height: 100vh; 
+.header-section {
     width: 100%;
-   /* Ensure full height even with small content */
-    padding: 90px;
+    height: 60vh;
     margin: auto;
-    
+    background: url("https://images.hdqwalls.com/wallpapers/blue-abstract-sharp-flows-4k-vn.jpg") fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10%;
+}
+
+.h-left {
+    margin: auto;
+    height: 90%;
+    width: 60%;
+}
+
+.h-s-icon {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.h-s-icon ul {
+    margin: auto;
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+
+.h-s-icon ul li {
+    width: 40%;
+    text-align: center;
+    list-style: none;
+}
+
+.h-s-icon ul li a {
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.h-text p {
+    font-size: large;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+.h-text h1 {
+    color: rgb(50, 131, 18);
+    text-align: center;
+}
+
+.h-text {
+    height: auto;
+    width: 100%;
+    margin: auto;
+}
+
+.divabout {
+    background-color: black;
+    width: 100%;
 }
 
 .abtmain {
-   
-    margin: auto;
-    width: 90%; 
-    width: 90%;
     display: flex;
- 
-}
-.aa{
-    background-color: #ddd;
+    width: 90%;
+    height: 100vh;
     margin: auto;
-    height: 100%;
+    justify-content: space-between;
 }
-.bb{
-    background-color: antiquewhite;
-    margin: auto;
-    height: 100%;
 
-}
-.cc{
-    background-color: beige;
+.aa, .bb, .cc {
+    background-color: rgb(0, 0, 0);
+    width: 30%;
+    height: 90%;
+    border-radius: 50px;
     margin: auto;
-    height: 100%;
+    padding-top: 30px;
+    transition: 0.5s;
+    color: wheat;
+}
+
+.aa:hover, .bb:hover, .cc:hover {
+    background-color: rgb(255, 255, 255);
+    scale: calc(1.1);
+    width: 50%;
+    color: rgb(168, 0, 0);
+}
+
+.aa h1, .bb h1, .cc h1 {
+    text-align: center;
+    transition: 0.5s;
+}
+
+.aa ul, .bb ul, .cc ul {
+    margin-top: 40px;
+}
+
+.aa ul li, .bb ul li, .cc ul li {
+    margin-left: 50px;
+    margin-top: 20px;
+    list-style: none;
+    color: gray;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cc ul li img {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+
+.cc ul li img:hover {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-section {
+        padding-top: 20%;
+        height: 60vh;
+        /* padding: 5%; */
+    }
+
+    .h-left {
+        width: 80%;
+    }
+
+    .h-s-icon ul {
+        width: 100%;
+    }
+
+    .h-s-icon ul li {
+        width: 100%;
+    }
+
+    .abtmain {
+        flex-direction: column;
+        height: auto;
+    }
+    
+
+    .aa, .bb, .cc {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .aa:hover, .bb:hover, .cc:hover {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-section {
+        padding-top: 25%;
+        height: 60vh;
+        /* padding: 5%; */
+    }
+
+    .h-text p {
+        font-size: medium;
+    }
+
+    .h-text h1 {
+        font-size:large;
+    }
+    .h-s-icon ul li {
+        margin-bottom: 10px;
+    }
+
+    .aa ul li, .bb ul li, .cc ul li {
+        margin-left: 20px;
+        font-size: medium;
+    }
 }
