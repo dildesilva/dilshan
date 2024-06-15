@@ -109,3 +109,32 @@
     padding: 20px;
     margin-top: 80px;
 }
+
+
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Media Queries for Footer Bottom */
+@media (max-width: 768px) {
+    .footer-bottom {
+        padding: 20px 0;
+    }
+}
