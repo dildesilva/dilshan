@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #000000;
     /* background-color: black; */
 }
 
@@ -16,13 +17,17 @@ body {
     height: 60vh;
     width: 100%;
     margin: auto;
-  background:url('https://wallpaperaccess.com/full/4107352.jpg') fixed ;
+  background:url('https://static.vecteezy.com/system/resources/previews/006/430/145/original/technology-background-concept-circuit-board-electronic-system-futuristic-hi-tech-light-on-dark-blue-free-vector.jpg') fixed ;
     background-size: cover;
     background-repeat: no-repeat;
-    /* padding: 10%; */
+opacity: 90%;
+    padding-top: 15%;
     /* margin-top: 10%; */
 }
-
+.header h1{
+ color: #ffffff;
+ text-align: center;
+}
 .contact-section {
     min-height: 60vh;
     background-color: #000000;
@@ -83,8 +88,8 @@ h2 {
 @media (max-width: 768px) {
     .header {
         height: 50vh;
-   background: url('https://i0.wp.com/wallpapers.com/images/hd/glowing-contact-us-logo-qx58564q7a51etk6.jpg?ssl=1') fixed;
-
+   background: url('https://static.vecteezy.com/system/resources/previews/006/430/145/original/technology-background-concept-circuit-board-electronic-system-futuristic-hi-tech-light-on-dark-blue-free-vector.jpg') fixed;
+   /* padding-top: 30%; */
         background-size:contain;
         /* padding: 5%; */
     }
@@ -97,8 +102,8 @@ h2 {
 @media (max-width: 480px) {
     .header {
         height: 35vh;
-   background: url('https://i0.wp.com/wallpapers.com/images/hd/glowing-contact-us-logo-qx58564q7a51etk6.jpg?ssl=1') fixed;
-
+   background: url('https://static.vecteezy.com/system/resources/previews/006/430/145/original/technology-background-concept-circuit-board-electronic-system-futuristic-hi-tech-light-on-dark-blue-free-vector.jpg') fixed;
+   padding-top: 30%;
         background-size:contain;
         /* padding: 5%; */
     }
