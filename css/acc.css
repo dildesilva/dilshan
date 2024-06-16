@@ -1,0 +1,187 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #010e18; /* Dark background color */
+    color: #ecf0f1; /* Light text color */
+    margin: 0;
+}
+
+/* Wall section */
+.wall {
+    background: url('https://wallpapers.com/images/featured/dark-academia-3y58wl8031smrcoj.jpg') fixed no-repeat;
+    background-size: cover;
+    opacity: 70%;
+    height: 50vh; /* Adjust height as needed */
+    width: 100%;
+    padding-top: 100px;
+}
+.wall h1 {
+    color: #ffffff;
+    text-align: center;
+   
+}
+/* Main content container */
+.content {
+    max-width: 90%;
+    margin: auto;
+    margin-top: -10vh; /* Adjusted negative margin-top for content */
+    padding: 20px;
+    background-color: #171a1d; /* Darker background for content */
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+}
+
+/* Centered heading with underline */
+.content h2 {
+    text-align: center;
+    color: #ecf0f1; /* Light text color */
+    font-size: 2em;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Underline decoration for heading */
+.content h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #3498db; /* Accent color */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline container */
+.timeline {
+    margin-top: 30px;
+}
+
+/* Remove default list styles */
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual timeline item */
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Date section */
+.timeline-date {
+    min-width: 150px;
+    padding: 10px;
+    background-color: #3498db; /* Accent color */
+    color: #ecf0f1; /* Light text color */
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    margin-right: 10px;
+}
+
+/* Content section */
+.timeline-content {
+    background-color: #34495e; /* Darker background for content */
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+/* Title of each qualification */
+.timeline-content h3 {
+    color: #ecf0f1; /* Light text color */
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+/* Description of each qualification */
+.timeline-content p {
+    color: #bdc3c7; /* Lighter text color for description */
+    font-size: 1em;
+}
+
+/* Timeline connector line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100% - 50px);
+    border-left: 2px dashed #3498db; /* Accent color for dashed line */
+    z-index: 0;
+}
+
+/* Adjust connector line for first item */
+.timeline-item:first-child::before {
+    top: 50px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding: 10px;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
+    }
+
+    .timeline-date {
+        min-width: auto;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .timeline-item::before {
+        left: 10px;
+        transform: translateY(-50%);
+        height: calc(100% - 50px);
+        border-left: 2px dashed #3498db; /* Accent color for dashed line */
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-item::before {
+        display: none; /* Hide timeline connector on smaller screens */
+    }
+
+    .wall {
+        height: 35vh;
+        background-size: cover;
+    }
+
+    .content {
+        margin-top: -5vh; /* Adjusted margin-top for content */
+        margin-bottom: 5vh; /* Adjusted margin-bottom for content */
+    }
+}
