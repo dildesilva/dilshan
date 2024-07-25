@@ -116,6 +116,9 @@
         height: 200px;
         width: 200px;
     }
+    .h-text p {
+        font-size: medium;
+    }
 
     .h-text {
         margin-top: 10%;
