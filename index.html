@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root {
-            --primary: rgba(0, 179, 255, 0.8);
-            --secondary: rgba(0, 255, 136, 0.8);
+            --primary: rgb(0, 26, 53);
+            --secondary: rgba(0, 255, 115, 0.8);
             --glass: rgba(255, 255, 255, 0.1);
-            --dark: #0a192f;
+            --dark: #0a0331;
             --light: #e6f1ff;
             --accent: #64ffda;
         }
@@ -51,16 +51,16 @@
         .shape-1 {
             width: 600px;
             height: 600px;
-            background: var(--primary);
+            background: rgb(0, 18, 66);
             top: -100px;
             left: -100px;
             animation-delay: 0s;
         }
         
         .shape-2 {
-            width: 500px;
-            height: 500px;
-            background: var(--secondary);
+            width: 400px;
+            height: 400px;
+            background: rgb(0, 97, 73);
             bottom: -150px;
             right: -100px;
             animation-delay: 3s;
@@ -82,7 +82,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
+            padding: 10px 5%;
             position: fixed;
             width: 100%;
             top: 0;
@@ -94,7 +94,7 @@
         
         .logo h1 {
             font-size: 1.8rem;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: linear-gradient(90deg, rgb(170, 204, 255), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -279,6 +279,29 @@
             border: 2px solid var(--secondary);
         }
         
+        /* Credential Badges */
+        .credential-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+            opacity: 0;
+            animation: fadeIn 1s forwards 1.5s;
+        }
+        
+        .badge {
+            height: 80px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+        }
+        
+        .badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 179, 255, 0.3);
+        }
+        
         /* About Section */
         .section {
             padding: 100px 5%;
@@ -311,7 +334,7 @@
         
         .about-img {
             width: 300px;
-            height: 300px;
+            height: 450px;
             border-radius: 10px;
             overflow: hidden;
             position: relative;
@@ -352,7 +375,10 @@
         .about-text p {
             margin-bottom: 20px;
             line-height: 1.6;
-            color: rgba(230, 241, 255, 0.7);
+            color: rgb(230, 241, 255);
+            background: rgba(100, 255, 219, 0.363);
+            padding: 8px 15px;
+            border-radius: 4px;
         }
         
         .skills {
@@ -445,6 +471,185 @@
         
         .project-links i {
             margin-right: 5px;
+        }
+        
+        /* Education Section */
+        .education-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .education-item {
+            display: flex;
+            margin-bottom: 50px;
+            background: rgba(10, 25, 47, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 179, 255, 0.2);
+        }
+
+        .edu-left {
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        .edu-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .edu-date {
+            background: rgba(100, 255, 218, 0.1);
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: var(--secondary);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .edu-right {
+            flex: 1;
+        }
+
+        .education-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--light);
+        }
+
+        .institution {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .edu-details p {
+            margin-bottom: 10px;
+            color: rgba(230, 241, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .edu-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--secondary);
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .edu-link i {
+            margin-right: 5px;
+        }
+
+        .edu-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Certifications Section */
+        .certifications-section {
+            margin-top: 70px;
+        }
+
+        .certs-title {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--light);
+            display: flex;
+            align-items: center;
+        }
+
+        .certs-title i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .cert-item {
+            display: flex;
+            background: rgba(10, 25, 47, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            box-shadow: 0 10px 20px rgba(0, 179, 255, 0.1);
+        }
+
+        .cert-badge {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .cert-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .cert-info {
+            flex: 1;
+        }
+
+        .cert-info h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--light);
+        }
+
+        .cert-id {
+            font-size: 0.8rem;
+            color: rgba(230, 241, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .cert-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--secondary);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-link i {
+            margin-left: 5px;
+            font-size: 0.7rem;
+        }
+
+        .cert-link:hover {
+            text-decoration: underline;
         }
         
         /* Contact Section - Redesigned */
@@ -542,6 +747,7 @@
         .contact-image img {
             width: 100%;
             max-width: 400px;
+            height: 400px;
             border-radius: 10px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             border: 2px solid var(--secondary);
@@ -665,6 +871,35 @@
             .hero-image {
                 width: 80%;
             }
+            
+            .credential-badges {
+                justify-content: center;
+            }
+
+            .education-item {
+                flex-direction: column;
+            }
+            
+            .edu-left {
+                flex-direction: row;
+                width: 100%;
+                margin-bottom: 20px;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            .edu-icon {
+                margin-bottom: 0;
+                margin-right: 15px;
+            }
+            
+            .edu-date {
+                margin-left: auto;
+            }
+            
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 576px) {
@@ -685,7 +920,92 @@
             .hero-image {
                 width: 100%;
             }
+            
+            .badge {
+                height: 60px;
+            }
+
+            .education-item {
+                padding: 20px;
+            }
+            
+            .cert-item {
+                flex-direction: column;
+            }
+            
+            .cert-badge {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
+
+
+
+
+
+        /* Projects Section Enhancements */
+.project-category {
+    margin-bottom: 3rem;
+}
+
+.project-category h3 {
+    color: #35424a;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.under-construction {
+    background: #fff3cd;
+    color: #856404;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.under-construction a {
+    color: #d4a017;
+    text-decoration: underline;
+}
+
+.project-embed, .project-image {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.project-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #35424a;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-code:hover {
+    background: #f4a261;
+}
     </style>
 </head>
 <body>
@@ -709,6 +1029,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -720,18 +1041,22 @@
         <div class="hero-content">
             <h2>Hi, my name is</h2>
             <h1>Dilshan De Silva.</h1>
-            <p>I'm a passionate developer with expertise in full-stack development and system architecture. I create innovative digital solutions that bridge technology and user experience, transforming ideas into functional, scalable applications.</p>
+            <p>
+                I am currently working as an IT Support and Software Developer at DoubleClick Group Seychelles, 
+                with hands-on experience in software installation, user login support, and basic hardware troubleshooting,
+                 while also holding several CISCO certifications and preparing for my Bachelor's Final year.
+            </p>
+            
+            <div class="credential-badges">
+                <img src="https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png" alt="Cybersecurity" class="badge">
+                <img src="https://images.credly.com/images/19e742ef-13be-4d26-87ed-ac8f5fd0643c/image.png" alt="Networking Basics" class="badge">
+                <img src="https://images.credly.com/images/474a03c6-b5e1-44df-b313-adf0fed6c531/blob" alt="Programming Essentials in Python" class="badge">
+                <img src="https://images.credly.com/images/70cc28ef-542c-4ce2-8bad-e8d95daf5138/blob" alt="Programming Essentials in Python" class="badge">
+            </div>
+            
             <div class="hero-btns">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn">Contact Me</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://github.com/dildesilva" aria-label="GitHub"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/dilshansdesilva" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.facebook.com/dilshansdesilva.official" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://www.instagram.com/dilshans.desilva/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.youtube.com/@dilcode" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             </div>
         </div>
         
@@ -745,15 +1070,11 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-img">
-                <img src="https://github.com/dildesilva/ddpp/blob/main/dp%20(2).jpg?raw=true" alt="Dilshan De Silva">
+                <img src="https://s44783.pcdn.co/in/wp-content/uploads/sites/3/2022/10/Technical-Skills_How-to-Them-Master-in-2022.jpg.optimal.jpg" alt="Dilshan De Silva">
             </div>
             <div class="about-text">
-                <p>Currently working as an IT Support and Software Developer at DoubleClick Group Seychelles. Experienced in
-hardware and software troubleshooting, user support, and system maintenance. Also gaining practical
-experience in full-stack developing using Laravel and related technologies. Previously worked as an IT Help Desk
-Associate. Completed Diploma and Higher National Diploma in Information Technology, preparing to start a
-Bachelor of Science in IT. Motivated to develop skills and provide effective IT support.</p>
-               <div class="skills">
+                <p>My name is Dilshan. I have completed both an HND and a Diploma in Information Technology and hold several CISCO certifications. I am currently preparing to enter the final year (top-up) of a Bachelor's degree. I have a strong interest in IT support roles and practical experience in the field. I have handled responsibilities such as installing software, assisting users with login and access issues, and resolving basic hardware problems. At present, I am working as an IT Support Technician at DoubleClick Group Seychelles, where I continue to build my skills and experience in technical support.</p>
+                <div class="skills">
                     <span class="skill">JavaScript</span>
                     <span class="skill">React</span>
                     <span class="skill">Node.js</span>
@@ -764,84 +1085,279 @@ Bachelor of Science in IT. Motivated to develop skills and provide effective IT 
                     <span class="skill">Git</span>
                     <span class="skill">REST APIs</span>
                     <span class="skill">Android</span>
+                    <span class="skill">Customer Service</span>
+                    <span class="skill">Documentation and Reporting</span>
+                    <span class="skill">Effective Communication</span>
+                    <span class="skill">Help Desk Concepts</span>
+                    <span class="skill">Remote Troubleshooting</span>
+                    <span class="skill">Technical Problem Solving</span>
+                    <span class="skill">Operating Systems Support</span>
+                    <span class="skill">Windows Troubleshooting</span>
+                    <span class="skill">macOS Troubleshooting</span>
+                    <span class="skill">Mobile Device Support</span>
+                    <span class="skill">Cloud Computing</span>
+                    <span class="skill">Virtualization Concepts</span>
+                    <span class="skill">Software Installation</span>
+                    <span class="skill">Cybersecurity</span>
+                    <span class="skill">Privacy and Data Confidentiality</span>
+                    <span class="skill">Threat Detection</span>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <h2 class="section-title">My Projects</h2>
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <h2 class="section-title">Education & Certifications</h2>
+        
+        <div class="education-container">
+            
+            <!-- Education Item 1 -->
+            <div class="education-item">
+                <div class="edu-left">
+                    <div class="edu-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <div class="edu-date">
+                        <span>2022 - Present</span>
+                    </div>
+                </div>
+                <div class="edu-right">
+                    <h3>HND in Information Technology  (2 year)</h3>
+                    <p class="institution">Sri Lanka Institute of Advanced Technological Education (SLIATE)</p>
+                    <div class="edu-details">
+                        <p>Final SGPA: 3.85</p>
+                        <p>This Higher National Diploma program provides strong theoretical and practical knowledge in computing, software engineering, database systems, and network administration.</p>
+                    </div>
+                    <a href="https://www.sliate.ac.lk/" target="_blank" class="edu-link">
+                        <i class="bi bi-box-arrow-up-right"></i> Visit Institution
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Education Item 2 -->
+            <div class="education-item">
+                <div class="edu-left">
+                    <div class="edu-icon">
+                        <i class="bi bi-book-fill"></i>
+                    </div>
+                    <div class="edu-date">
+                        <span>2021 - 2022</span>
+                    </div>
+                </div>
+                <div class="edu-right">
+                    <h3>Diploma in Information Technology  (1 year)</h3>
+                    <p class="institution">Science and Information Technology City Campus</p>
+                    <div class="edu-details">
+                        <p>Final Grade: A+</p>
+                        <p>This diploma covered foundational IT concepts including computer hardware, software, operating systems, and introductory programming techniques.</p>
+                    </div>
+                    <a href="https://sitc.lk/" target="_blank" class="edu-link">
+                        <i class="bi bi-box-arrow-up-right"></i> Visit Institution
+                    </a>
+                </div>
+            </div>
+
+            <!-- Education Item 0 -->
+            <div class="education-item">
+               <div class="edu-left">
+                    <div class="edu-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <div class="edu-date">
+                        <span>2025 - Waiting....</span>
+                    </div>
+                </div>
+                 <div class="edu-right">
+                    <h3>Bachelor of Science (Honours) in Computing (Final year)</h3>
+                    <p class="institution"> 
+                        Starting Soon</p>
+                    <div class="edu-details">
+                        <p> Not Yet Started (September 2025)</p>
+                        <!-- <p>This Higher National Diploma program provides strong theoretical and practical knowledge in computing, software engineering, database systems, and network administration.</p> -->
+                    </div>
+                    <a href="https://wrexham.ac.uk/" target="_blank" class="edu-link">
+                        <i class="bi bi-box-arrow-up-right"></i> Visit Institution
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certifications Section -->
+            <div class="certifications-section">
+                <h3 class="certs-title">
+                    <i class="bi bi-award-fill"></i> Professional Certifications
+                </h3>
+                
+                <div class="cert-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <img src="https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png" alt="Cybersecurity">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Cisco Certified: Introduction to Cybersecurity</h4>
+                            <p class="cert-id">Credential ID: 77cd9f47-4b50-49c1-860d-ba664c22d8c9</p>
+                            <a href="https://www.credly.com/badges/77cd9f47-4b50-49c1-860d-ba664c22d8c9" target="_blank" class="cert-link">
+                                View Credential <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert 2 -->
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <img src="https://images.credly.com/images/19e742ef-13be-4d26-87ed-ac8f5fd0643c/image.png" alt="Networking Basics">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Cisco Certified: Operating Systems Support</h4>
+                            <p class="cert-id">Credential ID: b8e99fed-1e34-495e-b311-28345feae134</p>
+                            <a href="https://www.credly.com/badges/b8e99fed-1e34-495e-b311-28345feae134/public_url" target="_blank" class="cert-link">
+                                View Credential <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert 3 -->
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <img src="https://images.credly.com/images/474a03c6-b5e1-44df-b313-adf0fed6c531/blob" alt="Python">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Cisco Certified: Computer Hardware Basics</h4>
+                            <p class="cert-id">Credential ID: 0173ae5d-198a-4662-aedf-324373b5414a</p>
+                            <a href="https://www.credly.com/badges/0173ae5d-198a-4662-aedf-324373b5414a" target="_blank" class="cert-link">
+                                View Credential <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert 4 -->
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <img src="https://images.credly.com/images/70cc28ef-542c-4ce2-8bad-e8d95daf5138/blob" alt="IT Support">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Cisco Certified: IT Customer Support Basics</h4>
+                            <p class="cert-id">Credential ID: 386d9555-52c6-4b59-b971-943bf53ed72b</p>
+                            <a href="https://www.credly.com/badges/386d9555-52c6-4b59-b971-943bf53ed72b" target="_blank" class="cert-link">
+                                View Credential <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+<div class="under-construction">
+    <marquee>
+        🚧 This Section is under construction and being updated. For now, check out my work - Last updated: <span id="current-date"></span>
+    </marquee>
+</div>
+
+
+    <!-- Web Projects -->
+    <div class="project-category">
+        <h3><i class="fas fa-laptop-code"></i> Web Projects</h3>
         <div class="projects-grid">
-            <!-- Project 1 -->
+            <!-- Portfolio Website -->
             <div class="project-card">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Portfolio Website">
+                <h4>Portfolio Website (HTML/JS/CSS)</h4>
+                <div class="project-embed">
+                    <iframe src="https://dildesilva.github.io/dilshan/" frameborder="0"></iframe>
                 </div>
-                <div class="project-info">
-                    <h3>Portfolio Website</h3>
-                    <p>A responsive portfolio website built with HTML, CSS, and JavaScript to showcase my skills and projects with descriptions, videos, and GitHub links.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/dildesilva" target="_blank"><i class="bi bi-github"></i> Code</a>
-                        <a href="https://dildesilva.github.io/dilshan/" target="_blank"><i class="bi bi-eye"></i> Live Demo</a>
-                    </div>
-                </div>
+                <p>A responsive portfolio showcasing skills, projects, and contact info.</p>
+                <a href="https://github.com/dildesilva" class="btn-code" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
             </div>
-            
-            <!-- Project 2 -->
+
+            <!-- React Portfolio -->
             <div class="project-card">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="React Portfolio">
+                <h4>React Portfolio</h4>
+                <div class="project-embed">
+                    <iframe src="https://dildesilva.github.io/dilshan/" frameborder="0"></iframe>
                 </div>
-                <div class="project-info">
-                    <h3>React Portfolio</h3>
-                    <p>Rebuilt my portfolio using ReactJS to create a more dynamic and interactive experience with modern UI components and animations.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/dildesilva/using-react-js-web" target="_blank"><i class="bi bi-github"></i> Code</a>
-                        <a href="https://dildesilva.github.io/dilshan/" target="_blank"><i class="bi bi-eye"></i> Live Demo</a>
-                    </div>
-                </div>
+                <p>Rebuilt portfolio using ReactJS for better performance.</p>
+                <a href="https://github.com/dildesilva/using-react-js-web" class="btn-code" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
             </div>
-            
-            <!-- Project 3 -->
+
+            <!-- Laravel EBS -->
             <div class="project-card">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Electricity Bill System">
+                <h4>Electricity Bill System (Laravel)</h4>
+                <div class="project-image">
+                    <img src="img/ssw.png" alt="Laravel EBS Screenshot">
                 </div>
-                <div class="project-info">
-                    <h3>Electricity Bill System</h3>
-                    <p>A Laravel-based system that handles meter readings, bill calculations, payments, and customer management with secure authentication.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/dildesilva/" target="_blank"><i class="bi bi-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 4 -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Astrology Time Calculator">
-                </div>
-                <div class="project-info">
-                    <h3>Astrology Time Calculator</h3>
-                    <p>An Android app for adding two times, designed to seamlessly integrate time calculations into astrological practice.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/dildesilva/cal-app" target="_blank"><i class="bi bi-github"></i> Code</a>
-                    </div>
-                </div>
+                <p>Laravel-based system for meter readings and bill calculations.</p>
+                <a href="https://github.com/dildesilva" class="btn-code" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
             </div>
         </div>
-    </section>
-    
+    </div>
+
+    <!-- Mobile Projects -->
+    <div class="project-category">
+        <h3><i class="fas fa-mobile-alt"></i> Mobile Projects</h3>
+        <div class="projects-grid">
+            <!-- Astrology Time Cal -->
+            <div class="project-card">
+                <h4>Astrology Time Cal (Android)</h4>
+                <div class="project-image">
+                    <img src="img/Screenshot_20240805-154526_TimeCal.jpg" alt="Android App Screenshot">
+                </div>
+                <p>Android app for astrological time calculations.</p>
+                <a href="https://github.com/dildesilva/cal-app" class="btn-code" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Java Projects -->
+    <div class="project-category">
+        <h3><i class="fab fa-java"></i> Java Projects</h3>
+        <div class="projects-grid">
+            <!-- JDBC Project -->
+            <div class="project-card">
+                <h4>Java JDBC</h4>
+                <div class="project-embed">
+                    <iframe src="https://www.youtube.com/embed/RfHW1GTLuo4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Database connectivity using Java JDBC API.</p>
+                <a href="https://github.com/dildesilva/JDBC.git" class="btn-code" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
     <!-- Contact Section - Redesigned -->
     <section class="contact-section" id="contact">
         <div class="contact-container">
             <div class="contact-info">
                 <h2>Get In Touch</h2>
-                <div class="contact-item">
+                <!-- <div class="contact-item">
                     <i class="bi bi-geo-alt-fill"></i>
                     <p>499/L Hallina Rd, Hunuwala, Opanayaka (70080), Rathnapura, Sri Lanka</p>
-                </div>
+                </div> -->
                 <div class="contact-item">
                     <i class="bi bi-telephone-fill"></i>
                     <p><a href="tel:+94719892193">+94 71 98 92 193</a></p>
@@ -859,14 +1375,14 @@ Bachelor of Science in IT. Motivated to develop skills and provide effective IT 
                 </div>
             </div>
             <div class="contact-image">
-                <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Contact Illustration">
+                <img src="https://img.freepik.com/free-vector/polygonal-wireframe-image-human-hand-touch-electronic-display-abstract-vector-illustration_1284-30756.jpg" alt="Contact Illustration">
             </div>
         </div>
     </section>
     
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Dilshan De Silva. All rights reserved.</p>
+        <p>&copy; 2025 Dilshan De Silva. All rights reserved.</p>
     </footer>
     
     <!-- Floating Tech Elements -->
@@ -948,7 +1464,7 @@ Bachelor of Science in IT. Motivated to develop skills and provide effective IT 
         
         // Scroll animation
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.section, .project-card, .about-content, .contact-container');
+            const elements = document.querySelectorAll('.section, .project-card, .about-content, .contact-container, .education-item, .cert-item');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -962,6 +1478,11 @@ Bachelor of Science in IT. Motivated to develop skills and provide effective IT 
         
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
-    </script>
+ 
+    // Display current date
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+</script>
 </body>
 </html>
